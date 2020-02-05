@@ -20,24 +20,10 @@
           "protocol": "tcp"
         }
       ],
-      "essential": true,
-      "mountPoints": [
-        {
-          "containerPath": "/var/www/html/",
-          "sourceVolume": "wordpress-efs"
-        }
-      ]
+      "essential": true
     }
   ],
   "requiresCompatibilities": ["FARGATE"],
-  "volumes": [
-    {
-      "name": "wordpress-efs",
-      "host": {
-          "sourcePath": "/efs/wordpress"
-      }
-    }
-  ],
   "networkMode": "awsvpc",
   "cpu": "256",
   "memory": "512",
