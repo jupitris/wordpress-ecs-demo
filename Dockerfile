@@ -7,3 +7,4 @@ RUN echo "${TZ}" > /etc/timezone \
 RUN apt-get update -y
 
 ADD ./healthy.conf /etc/apache2/conf-available/healthy.conf
+ADD ./healthy.html /var/www/html/healthy.html
